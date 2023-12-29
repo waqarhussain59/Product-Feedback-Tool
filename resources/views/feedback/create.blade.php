@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header bg-info text-white">
+                    <div class="card-header bg-info text-white" style="background: linear-gradient(90deg, #bb084a, #68062a);">
                         <h2 class="display-6 mb-0">Create New Feedback</h2>
                     </div>
 

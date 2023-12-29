@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header" style="background: linear-gradient(90deg, #021048, #1e38a3); color: #fff;">
+                    <div class="card-header"  style="background: linear-gradient(90deg, #bb084a, #68062a);">
                         {{ __('Register') }}
                     </div>
 

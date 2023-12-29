@@ -4,7 +4,7 @@
     <div class="container my-3">
         @auth
             <div class="text-end">
-                <a href="{{ route('feedback.create') }}" class="btn btn-success">Share Your Thoughts</a>
+                <a href="{{ route('feedback.create') }}" style="background: #37474F" class="btn text-white">Share Your Thoughts</a>
             </div>
         @endauth
             @guest
@@ -12,8 +12,8 @@
 
                 @foreach ($feedbackItems as $feedback)
                     <div class="col">
-                        <div class="card">
-                            <div class="card-header bg-info text-white">
+                        <div class="card mt-3">
+                            <div style="background: linear-gradient(90deg, #bb084a, #68062a);" class="card-header text-white">
                                 <h5 class="card-title">
                                     <strong>Title:</strong> <strong>{{ $feedback->title }}</strong>
                                 </h5>
@@ -21,15 +21,24 @@
 
                             <div class="card-body">
                                 <p class="card-text" style="font-size: 1.1rem;">
-                                    <strong>Description:</strong> {{ $feedback->description }}
+                                    <strong style="color:#37474F ">Description:</strong> {{ $feedback->description }}
                                 </p>
+                                <div class="d-flex gap-3">
                                 <div class="mb-2">
-                                    <span class="badge bg-secondary">Category: {{ $feedback->category }}</span>
+                                    <span style="background:#37474F " class="badge text-white">Category: {{ $feedback->category }}</span>
                                 </div>
                                 <div class="mb-2">
-                                    <span class="badge bg-secondary">By: {{ $feedback->user->name }}</span>
+                                    <span style="background:#37474F " class="badge "> Created By: {{ $feedback->user->name }}</span>
+                                </div>
+                                </div>
+                                <div class="mb-2">
+                                    <span style="background:#37474F "  class="badge text-white">Votes: <span id="votes-count-{{ $feedback->id }}">{{ $feedback->votes_count }}</span></span>
+                                    <button class="btn btn-outline-primary btn-sm ms-2" onclick="vote('{{ $feedback->id }}')">
+                                        <i class="fas fa-thumbs-up"></i> Vote
+                                    </button>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <section class="bg-light py-3 text-center">
@@ -45,24 +54,27 @@
 
                 @foreach ($feedbackItems as $feedback)
                     <div class="col">
-                        <div class="card">
-                            <div class="card-header bg-info text-white">
+                        <div class="card mt-3">
+                            <div style="background: linear-gradient(90deg, #bb084a, #68062a);" class="card-header text-white">
                                 <h5 class="card-title">
                                     <strong>Title:</strong> <strong>{{ $feedback->title }}</strong>
                                 </h5>
                             </div>
-                            <div class="card-body">
-                                <p class="card-text" style="font-size: 1.1rem;">
-                                    <strong>Description:</strong> {{ $feedback->description }}
+                            <div class="card-body" >
+                                <p  class="card-text" style="font-size: 1.1rem;">
+                                    <strong style="color:#37474F ">Description:</strong> {{ $feedback->description }}
                                 </p>
+                                <div class="d-flex gap-3">
                                 <div class="mb-2">
-                                    <span class="badge bg-secondary">Category: {{ $feedback->category }}</span>
+                                    <span style="background:#37474F " class="badge text-white">Category: {{ $feedback->category }}</span>
                                 </div>
                                 <div class="mb-2">
-                                    <span class="badge bg-secondary">By: {{ $feedback->user->name }}</span>
+                                    <span style="background:#37474F " class="badge text-white">Created By: {{ $feedback->user->name }}</span>
+                                </div>
+
                                 </div>
                                 <div class="mb-2">
-                                    <span class="badge bg-secondary">Votes: <span id="votes-count-{{ $feedback->id }}">{{ $feedback->votes_count }}</span></span>
+                                    <span style="background:#37474F "  class="badge text-white">Votes: <span id="votes-count-{{ $feedback->id }}">{{ $feedback->votes_count }}</span></span>
                                     <button class="btn btn-outline-primary btn-sm ms-2" onclick="vote('{{ $feedback->id }}')">
                                         <i class="fas fa-thumbs-up"></i> Vote
                                     </button>

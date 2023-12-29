@@ -47,7 +47,7 @@
         }
 
         header {
-            background: linear-gradient(90deg, #2c3e50, #3498db) !important; /* Updated header gradient colors */
+            background-image: linear-gradient(90deg,#96286d,#c33352,#ef3e36); !important; /* Updated header gradient colors */
             color: #fff;
             padding: 50px 20px;
             text-align: center;
@@ -71,7 +71,7 @@
         }
 
         .navbar {
-            background: linear-gradient(90deg, #2c3e50, #3498db) !important; /* Updated navbar gradient colors */
+            background-image: linear-gradient(90deg,#96286d,#c33352,#ef3e36); !important; /* Updated navbar gradient colors */
         }
 
         .navbar-brand,
@@ -81,15 +81,19 @@
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, #2c3e50, #3498db) !important; /* Updated button gradient colors */
+            background-image: linear-gradient(90deg,#96286d,#c33352,#ef3e36) !important; /* Updated button gradient colors */
             border-color: #3498db;
             font-size: 1.2em;
+            border: none !important;
         }
 
-        .btn-primary:hover {
-            background: linear-gradient(90deg, #1f2b38, #217dbb) !important; /* Adjusted button hover gradient colors */
-            border-color: #217dbb;
-        }
+        /*.btn-primary:hover {*/
+        /*    background: linear-gradient(90deg, #1f2b38, #217dbb) !important; !* Adjusted button hover gradient colors *!*/
+        /*    border-color: #217dbb;*/
+        /*}  /*.btn-primary:hover {*/
+        /*    background: linear-gradient(90deg, #1f2b38, #217dbb) !important; !* Adjusted button hover gradient colors *!*/
+        /*    border-color: #217dbb;*/
+        /*}*/
 
         /* Additional styles for Font Awesome icons within buttons */
         .btn i {
